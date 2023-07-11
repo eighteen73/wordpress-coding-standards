@@ -1,0 +1,39 @@
+{
+  "name": "@eighteen73/eslint-config-wordpress",
+  "version": "1.0.0",
+  "description": "eighteen73 coding standards for JavaScript.",
+  "author": "eighteen73",
+  "license": "MIT",
+  "keywords": [
+    "eslint",
+    "eslint-config",
+    "js",
+    "react",
+    "lint",
+    "linter",
+    "wordpress",
+    "eighteen73"
+  ],
+  "homepage": "https://github.com/eighteen73/wordpress-coding-standards/tree/main/packages/eslint-config-wordpress#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eighteen73/wordpress-coding-standards.git",
+    "directory": "packages/eslint-config"
+  },
+  "bugs": {
+    "url": "https://github.com/eighteen73/wordpress-coding-standards/issues"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "devDependencies": {
+    "@wordpress/eslint-plugin": "^14.10.0"
+  },
+  "peerDependencies": {
+    "eslint": ">=8"
+  }
+}
