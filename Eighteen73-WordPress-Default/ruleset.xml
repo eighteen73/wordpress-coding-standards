@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<ruleset name="Eighteen73-WordPress-Default">
+    <description>A base ruleset that all other eighteen73 WordPress rulesets should extend.</description>
+
+    <exclude-pattern>*/phpunit.xml*</exclude-pattern>
+    <exclude-pattern>*/languages/*</exclude-pattern>
+    <exclude-pattern>*/tests/*</exclude-pattern>
+
+    <!-- Third-party code -->
+    <exclude-pattern>*/node_modules/*</exclude-pattern>
+    <exclude-pattern>*/vendor/*</exclude-pattern>
+
+    <!-- Pass some flags to PHPCS:
+    p flag: Show progress of the run.
+    s flag: Show sniff codes in all reports.
+    -->
+    <arg value="ps" />
+
+    <!-- Show results with colors -->
+    <arg name="colors" />
+
+    <!-- Check up to 8 files simultanously. -->
+    <arg name="parallel" value="8" />
+
+    <!-- Only check the PHP files. -->
+    <arg name="extensions" value="php" />
+
+    <!-- Don't worry about files that don't contain any code -->
+    <rule ref="Internal.NoCodeFound">
+        <severity>0</severity>
+    </rule>
+
+    <!-- Ignore mixed line-endings warnings -->
+    <rule ref="Internal.LineEndings.Mixed">
+        <severity>0</severity>
+    </rule>
+
+    <!-- Internal exceptions (often occur on minified files) -->
+    <rule ref="Internal.Tokenizer.Exception">
+        <severity>0</severity>
+    </rule>
+
+    <!-- For CI, don't fail on warnings -->
+    <config name="ignore_warnings_on_exit" value="1" />
+
+    <rule ref="WordPress-Core">
+        <!-- We like short arrays and ternaries around here -->
+        <exclude name="Generic.Arrays.DisallowShortArraySyntax" />
+        <exclude name="WordPress.PHP.DisallowShortTernary" />
+
+        <!-- Yoda conditions are not required -->
+        <exclude name="WordPress.PHP.YodaConditions" />
+    </rule>
+
+    <!-- Enforce doc standards -->
+    <rule ref="WordPress-Docs">
+        <!-- Don't worry about capitalizing long lines -->
+        <exclude name="Generic.Commenting.DocComment.LongNotCapital" />
+
+        <!-- Dont need to capitalize first letter -->
+        <exclude name="Generic.Commenting.DocComment.ShortNotCapital" />
+    </rule>
+
+    <rule ref="WordPress-Extra">
+        <!-- Forget about file names -->
+        <exclude name="WordPress.Files.FileName" />
+
+        <!-- Allow same line control structures e.g. if ( true ) { echo 1; } -->
+        <exclude name="Squiz.ControlStructures.ControlSignature.NewlineAfterOpenBrace" />
+
+        <!-- Don't require punctuation after inline comments -->
+        <exclude name="Squiz.Commenting.InlineComment.InvalidEndChar" />
+
+        <!-- Allow empty catch statements -->
+        <exclude name="Generic.CodeAnalysis.EmptyStatement.DetectedCatch" />
+
+        <!-- Comment punctuation doesn't matter -->
+        <exclude name="Squiz.Commenting.FunctionComment.ParamCommentFullStop" />
+        <exclude name="Squiz.Commenting.FunctionComment.ThrowsNoFullStop" />
+
+        <!-- We have cache busting via dist/mix-manifest.json file. -->
+        <exclude name="WordPress.WP.EnqueuedResourceParameters.MissingVersion" />
+
+        <!-- Allow shorthand array syntax -->
+        <exclude name="Generic.Arrays.DisallowShortArraySyntax.Found" />
+
+        <!-- Allow WP global modification -->
+        <exclude name="WordPress.WP.GlobalVariablesOverride.Prohibited" />
+
+        <!-- This nonce sniff almost never works right -->
+        <exclude name="WordPress.Security.NonceVerification.Missing" />
+    </rule>
+
+    <!-- Sets the minimum supported WP version to 4.7, which is over a year old. -->
+    <config name="minimum_supported_wp_version" value="4.7" />
+
+    <!-- Make missing translator comment a warning. -->
+    <rule ref="WordPress.WP.I18n.MissingTranslatorsComment">
+        <type>warning</type>
+    </rule>
+
+    <!-- Sometimes we need to override globals -->
+    <rule ref="WordPress.WP.GlobalVariablesOverride.OverrideProhibited">
+        <type>warning</type>
+    </rule>
+
+    <!-- Disallow long array syntax. -->
+    <rule ref="Generic.Arrays.DisallowLongArraySyntax" />
+
+    <!-- Loads the PHP Compatibility ruleset. -->
+    <rule ref="PHPCompatibilityWP" />
+
+    <!-- PHP version check. -->
+    <config name="testVersion" value="7.4-" />
+</ruleset>
