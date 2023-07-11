@@ -34,9 +34,6 @@
     "@wordpress/stylelint-config": "^21.20.0",
     "stylelint-order": "^6.0.3"
   },
-  "peerDependencies": {
-    "stylelint": "^14.2"
-  },
   "publishConfig": {
     "access": "public"
   }
