@@ -1,0 +1,43 @@
+{
+  "name": "@eighteen73/stylelint-config-wordpress",
+  "version": "1.0.0",
+  "description": "eighteen73 coding standards for CSS and SCSS.",
+  "author": "eighteen73",
+  "license": "MIT",
+  "keywords": [
+    "stylelint",
+    "stylelint-config",
+    "css",
+    "scss",
+    "lint",
+    "linter",
+    "wordpress",
+    "eighteen73"
+  ],
+  "homepage": "https://github.com/eighteen73/wordpress-coding-standards/tree/main/packages/stylelint-config-wordpress#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eighteen73/wordpress-coding-standards.git",
+    "directory": "packages/stylelint-config"
+  },
+  "bugs": {
+    "url": "https://github.com/eighteen73/wordpress-coding-standards/issues"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {
+    "@wordpress/stylelint-config": "^21.20.0",
+    "stylelint-order": "^6.0.3"
+  },
+  "peerDependencies": {
+    "stylelint": "^14.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
