@@ -1,0 +1,7 @@
+{
+    "recommendations": [
+        "valeryanm.vscode-phpsab",
+        "stylelint.vscode-stylelint",
+        "dbaeumer.vscode-eslint"
+    ]
+}
