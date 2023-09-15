@@ -31,18 +31,15 @@ module.exports = {
 			'transition-delay': [ 'ms' ],
 			'transition-duration': [ 'ms' ]
 		},
-		'function-parentheses-space-inside': 'always-single-line',
-		'function-comma-space-after': 'always-single-line',
 		'function-url-quotes': 'always',
 		'max-line-length': 100,
 		'max-empty-lines': 1,
 		'max-nesting-depth': [
-			2,
+			4,
 			{
 				'ignore': [ 'blockless-at-rules' ]
 			}
 		],
-		'media-feature-parentheses-space-inside': 'always',
 		'rule-empty-line-before' : [
 			'always',
 			{
