@@ -18,6 +18,7 @@ module.exports = {
 				'ignore': [ 'stylelint-commands' ]
 			}
 		],
+		'no-descending-specificity': null,
 		'block-closing-brace-newline-before': 'always-multi-line',
 		'declaration-block-semicolon-newline-after': 'always-multi-line',
 		'declaration-block-single-line-max-declarations': 4,
@@ -32,7 +33,6 @@ module.exports = {
 			'transition-duration': [ 'ms' ]
 		},
 		'function-url-quotes': 'always',
-		'max-line-length': 100,
 		'max-empty-lines': 1,
 		'max-nesting-depth': [
 			4,
@@ -56,6 +56,12 @@ module.exports = {
 			}
 		],
 		'number-max-precision': 3,
+		'custom-property-pattern': [
+			'^([a-z][a-z0-9]*)(-[a-z0-9]+)*$|^wp--([a-z][a-z0-9]*)(--[a-z0-9]+)*$',
+			{
+				message: 'Expected custom property name to be kebab-case or wp--kebab--case',
+			},
+		],
 		'selector-class-pattern': [
 			'^(?<block>(?:[a-z][a-z0-9]*)(?:-[a-z0-9]+)*)(?<element>(?:__[a-z][a-z0-9]*(?:-[a-z0-9]+)*))?(?<modifier>(?:--[a-z][a-z0-9]*)(?:-[a-z0-9]+)*)?$',
 			{
