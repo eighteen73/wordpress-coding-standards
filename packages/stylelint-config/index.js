@@ -32,6 +32,8 @@ module.exports = {
 			'transition-duration': [ 'ms' ]
 		},
 		'function-url-quotes': 'always',
+		'no-descending-specificity': null,
+		'max-line-length': null,
 		'max-empty-lines': 1,
 		'max-nesting-depth': [
 			4,
