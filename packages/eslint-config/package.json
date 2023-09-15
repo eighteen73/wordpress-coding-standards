@@ -1,6 +1,6 @@
 {
   "name": "@eighteen73/eslint-config-wordpress",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "eighteen73 coding standards for JavaScript.",
   "author": "eighteen73",
   "license": "MIT",
@@ -31,8 +31,10 @@
     "index.js"
   ],
   "dependencies": {
-    "@wordpress/eslint-plugin": "^15.1.0",
-    "eslint-config-prettier": "^9.0.0",
+    "@wordpress/eslint-plugin": "^15.0.0",
+    "eslint-plugin-prettier": "^5.0.0"
+  },
+  "peerDependencies": {
     "prettier": "^3.0.0"
   },
   "publishConfig": {
