@@ -78,7 +78,7 @@
         <exclude name="Squiz.Commenting.FunctionComment.ParamCommentFullStop" />
         <exclude name="Squiz.Commenting.FunctionComment.ThrowsNoFullStop" />
 
-        <!-- We have cache busting via dist/mix-manifest.json file. -->
+        <!-- We have cache busting set via @wordpress/scripts -->
         <exclude name="WordPress.WP.EnqueuedResourceParameters.MissingVersion" />
 
         <!-- Allow shorthand array syntax -->
@@ -105,7 +105,7 @@
     </rule>
 
     <!-- Disallow long array syntax. -->
-    <rule ref="Generic.Arrays.DisallowLongArraySyntax" />
+    <rule ref="Universal.Arrays.DisallowLongArraySyntax" />
 
     <!-- Loads the PHP Compatibility ruleset. -->
     <rule ref="PHPCompatibilityWP" />
