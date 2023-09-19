@@ -9,6 +9,7 @@
     <!-- Third-party code -->
     <exclude-pattern>*/node_modules/*</exclude-pattern>
     <exclude-pattern>*/vendor/*</exclude-pattern>
+    <exclude-pattern>*/dist/*</exclude-pattern>
 
     <!-- Pass some flags to PHPCS:
     p flag: Show progress of the run.
@@ -45,8 +46,8 @@
 
     <rule ref="WordPress-Core">
         <!-- We like short arrays and ternaries around here -->
-        <exclude name="Generic.Arrays.DisallowShortArraySyntax" />
-        <exclude name="WordPress.PHP.DisallowShortTernary" />
+        <!-- <exclude name="Universal.Arrays.DisallowShortArraySyntax" /> -->
+        <exclude name="Universal.Operators.DisallowShortTernary" />
 
         <!-- Yoda conditions are not required -->
         <exclude name="WordPress.PHP.YodaConditions" />
@@ -79,10 +80,10 @@
         <exclude name="Squiz.Commenting.FunctionComment.ThrowsNoFullStop" />
 
         <!-- We have cache busting set via @wordpress/scripts -->
-        <exclude name="WordPress.WP.EnqueuedResourceParameters.MissingVersion" />
+        <exclude name="WordPress.WP.EnqueuedResourceParameters.NoExplicitVersion" />
 
         <!-- Allow shorthand array syntax -->
-        <exclude name="Generic.Arrays.DisallowShortArraySyntax.Found" />
+        <exclude name="Universal.Arrays.DisallowShortArraySyntax.Found" />
 
         <!-- Allow WP global modification -->
         <exclude name="WordPress.WP.GlobalVariablesOverride.Prohibited" />
@@ -105,7 +106,7 @@
     </rule>
 
     <!-- Disallow long array syntax. -->
-    <rule ref="Universal.Arrays.DisallowLongArraySyntax" />
+    <rule ref="Generic.Arrays.DisallowLongArraySyntax" />
 
     <!-- Loads the PHP Compatibility ruleset. -->
     <rule ref="PHPCompatibilityWP" />
