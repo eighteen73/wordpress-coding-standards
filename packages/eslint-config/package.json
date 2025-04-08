@@ -1,7 +1,7 @@
 {
   "name": "@eighteen73/eslint-config-wordpress",
   "version": "1.0.3",
-  "description": "eighteen73 coding standards for JavaScript.",
+  "description": "eighteen73 coding standards for JavaScript in WordPress projects.",
   "author": "eighteen73",
   "license": "MIT",
   "keywords": [

@@ -1,7 +1,7 @@
 {
-  "name": "@eighteen73/browserslist-config",
+  "name": "@eighteen73/browserslist-config-wordpress",
   "version": "1.0.0",
-  "description": "eighteen73 Browserslist shared configuration.",
+  "description": "eighteen73 Browserslist shared configuration for WordPress projects.",
   "author": "eighteen73",
   "license": "MIT",
   "keywords": [
