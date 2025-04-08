@@ -1,4 +1,4 @@
-# @eighteen73/browserslist-config
+# @eighteen73/browserslist-config-wordpress
 
 eighteen73 Browserslist shared configuration.
 
@@ -9,7 +9,7 @@ This package is a Browserslist shareable configuration.
 To install this config:
 
 ```bash
-npm install --save-dev @eighteen73/browserslist-config
+npm install --save-dev @eighteen73/browserslist-config-wordpress
 ```
 
 ## Usage
@@ -18,7 +18,7 @@ Add this to your `package.json` file:
 
 ```json
 "browserslist": [
-	"extends @eighteen73/browserslist-config"
+	"extends @eighteen73/browserslist-config-wordpress"
 ]
 ```
 
