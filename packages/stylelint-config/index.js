@@ -63,12 +63,6 @@ module.exports = {
 				message: 'Expected custom property name to be kebab-case or wp--kebab--case',
 			},
 		],
-		'selector-class-pattern': [
-			'^(?<block>(?:[a-z][a-z0-9]*)(?:-[a-z0-9]+)*)(?<element>(?:__[a-z][a-z0-9]*(?:-[a-z0-9]+)*))?(?<modifier>(?:--[a-z][a-z0-9]*)(?:-[a-z0-9]+)*)?$',
-			{
-				'resolveNestedSelectors': true
-			}
-		],
 		'selector-id-pattern': null
 	}
 }
