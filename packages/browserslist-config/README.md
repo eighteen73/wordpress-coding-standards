@@ -4,9 +4,9 @@ eighteen73 Browserslist shared configuration.
 
 ## Installation
 
-This package is a Browserslist shareable configuration, and requires the `stylelint` library.
+This package is a Browserslist shareable configuration.
 
-To install this config and dependencies:
+To install this config:
 
 ```bash
 npm install --save-dev @eighteen73/browserslist-config
