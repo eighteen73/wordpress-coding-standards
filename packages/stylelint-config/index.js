@@ -63,6 +63,7 @@ module.exports = {
 				message: 'Expected custom property name to be kebab-case or wp--kebab--case',
 			},
 		],
+		'selector-class-pattern': null,
 		'selector-id-pattern': null
 	}
 }
