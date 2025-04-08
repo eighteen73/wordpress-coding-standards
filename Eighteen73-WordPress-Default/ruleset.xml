@@ -90,6 +90,9 @@
 
         <!-- This nonce sniff almost never works right -->
         <exclude name="WordPress.Security.NonceVerification.Missing" />
+
+		<!-- Allow forward slashes in hook names -->
+		<exclude name="WordPress.NamingConventions.ValidHookName.UseUnderscores" />
     </rule>
 
     <!-- Sets the minimum supported WP version to 4.7, which is over a year old. -->
