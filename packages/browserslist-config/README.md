@@ -1,0 +1,31 @@
+# @eighteen73/browserslist-config
+
+eighteen73 Browserslist shared configuration.
+
+## Installation
+
+This package is a Browserslist shareable configuration, and requires the `stylelint` library.
+
+To install this config and dependencies:
+
+```bash
+npm install --save-dev @eighteen73/browserslist-config
+```
+
+## Usage
+
+Add this to your `package.json` file:
+
+```json
+"browserslist": [
+	"extends @eighteen73/browserslist-config"
+]
+```
+
+Alternatively, add this to `.browserslistrc` file:
+
+```
+extends @eighteen73/browserslist-config
+```
+
+This package when imported returns an array of supported browsers, for more configuration examples including Autoprefixer, Babel, ESLint, PostCSS, and stylelint see the [Browserslist examples](https://github.com/ai/browserslist-example#browserslist-example) repo.

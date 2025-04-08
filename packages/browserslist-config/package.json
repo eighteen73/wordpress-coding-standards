@@ -1,0 +1,32 @@
+{
+  "name": "@eighteen73/browserslist-config",
+  "version": "1.0.0",
+  "description": "eighteen73 Browserslist shared configuration.",
+  "author": "eighteen73",
+  "license": "MIT",
+  "keywords": [
+    "browserslist",
+    "browserslist-config",
+    "wordpress",
+    "eighteen73"
+  ],
+  "homepage": "https://github.com/eighteen73/wordpress-coding-standards/tree/main/packages/browserslist-config#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eighteen73/wordpress-coding-standards.git",
+    "directory": "packages/browserslist-config"
+  },
+  "bugs": {
+    "url": "https://github.com/eighteen73/wordpress-coding-standards/issues"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
