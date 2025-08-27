@@ -57,12 +57,6 @@ module.exports = {
 			}
 		],
 		'number-max-precision': 3,
-		'custom-property-pattern': [
-			'^([a-z][a-z0-9]*)(-[a-z0-9]+)*$|^wp--([a-z][a-z0-9]*)(--[a-z0-9]+(-[a-z0-9]+){0,}){1,}$',
-			{
-				message: 'Expected custom property name to be kebab-case or wp--kebab--case',
-			},
-		],
 		'selector-class-pattern': null,
 		'selector-id-pattern': null
 	}
