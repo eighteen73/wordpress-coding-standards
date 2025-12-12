@@ -1,6 +1,6 @@
 {
   "name": "@eighteen73/eslint-config-wordpress",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "eighteen73 coding standards for JavaScript in WordPress projects.",
   "author": "eighteen73",
   "license": "MIT",
@@ -24,18 +24,17 @@
     "url": "https://github.com/eighteen73/wordpress-coding-standards/issues"
   },
   "engines": {
-    "node": ">=16.0.0"
+    "node": ">=22.0.0"
   },
   "main": "index.js",
   "files": [
     "index.js"
   ],
-  "dependencies": {
-    "@wordpress/eslint-plugin": "^15.0.0",
-    "eslint-plugin-prettier": "^5.0.0"
+  "devDependencies": {
+    "@wordpress/eslint-plugin": "^22.0.0"
   },
   "peerDependencies": {
-    "prettier": "^3.0.0"
+    "@wordpress/eslint-plugin": "^22.0.0"
   },
   "publishConfig": {
     "access": "public"
