@@ -34,18 +34,22 @@ To find out what these codes are, specify `-s` when running `phpcs`, and the cod
 
 ## Using ESLint
 
-The ESLint package contains an [ESLint](https://eslint.org/) configuration which you can use to validate your JavaScript code style. While it is possible to run ESLint via phpcs, we recommend you install and use eslint via npm directly. See [the `@eighteen73/eslint-config-wordpress` package README](packages/eslint-config-wordpress/README.md) for more information on configuring ESLint to use the eighteen73 coding standards.
+The ESLint package contains an [ESLint](https://eslint.org/) configuration which you can use to validate your JavaScript code style. While it is possible to run ESLint via phpcs, we recommend you install and use eslint via npm directly. See [the `@eighteen73/eslint-config-wordpress` package README](packages/eslint-config/README.md) for more information on configuring ESLint to use the eighteen73 coding standards.
 
-To integrate the eighteen73 rules into your project, add a `.eslintrc` file and extend these rules. You can also add your own rules and overrides for further customization.
+To integrate the eighteen73 rules into your project, add an `eslint.config.cjs` file and extend these rules. You can also add your own rules and overrides for further customization.
 
-```json
-{
-  "extends": "@eighteen73/eslint-config-wordpress"
-  "rules": {
-    ...
-  }
-}
+```js
+const eighteen73 = require( '@eighteen73/eslint-config-wordpress' );
+
+module.exports = [
+	{
+		ignores: [ '**/build/**', '**/node_modules/**', '**/vendor/**' ],
+	},
+	...eighteen73,
+];
 ```
+
+If your project still uses `@wordpress/scripts@^31` with legacy `.eslintrc.json`, install `@eighteen73/eslint-config-wordpress@^1` instead. See the package README for migration details.
 
 ## Using stylelint
 
