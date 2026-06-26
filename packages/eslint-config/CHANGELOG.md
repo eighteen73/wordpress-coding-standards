@@ -18,6 +18,11 @@
 - `flat.js` — flat config export spreading `@wordpress/eslint-plugin` recommended preset.
 - `./legacy` subpath export for the v1 eslintrc config (`index.js`).
 
+### Fixed
+
+- Replace WordPress's TypeScript import resolver with the Node resolver so `import/no-unresolved` works in JS-only projects. WordPress enables `eslint-import-resolver-typescript`, but that package is often not hoisted to the consumer; ESLint then loads the `typescript` package itself and reports *"typescript with invalid interface loaded as resolver"* for every file.
+- Restore `@wordpress/eslint-plugin` v22 behaviour for bundled WordPress packages: ignore most `@wordpress/*` imports in `import/no-unresolved` and allow `devDependencies` in `import/no-extraneous-dependencies`. `@wordpress/eslint-plugin` v25 removed these when moving to flat config.
+
 ### Unchanged
 
 - Rules remain WordPress recommended only (`plugin:@wordpress/eslint-plugin/recommended`).
