@@ -1,11 +1,11 @@
 'use strict';
 
 module.exports = {
-	extends: '@wordpress/stylelint-config/scss',
+	extends: '@wordpress/stylelint-config/scss-stylistic',
 	plugins: [
 		'stylelint-order'
-  	],
-  	rules: {
+	],
+	rules: {
 		'order/order': [
 			'custom-properties',
 			'declarations'
@@ -18,8 +18,8 @@ module.exports = {
 				'ignore': [ 'stylelint-commands' ]
 			}
 		],
-		'block-closing-brace-newline-before': 'always-multi-line',
-		'declaration-block-semicolon-newline-after': 'always-multi-line',
+		'@stylistic/block-closing-brace-newline-before': 'always-multi-line',
+		'@stylistic/declaration-block-semicolon-newline-after': 'always-multi-line',
 		'declaration-block-single-line-max-declarations': 4,
 		'declaration-no-important': true,
 		'declaration-property-unit-allowed-list': {
@@ -33,8 +33,8 @@ module.exports = {
 		},
 		'function-url-quotes': 'always',
 		'no-descending-specificity': null,
-		'max-line-length': null,
-		'max-empty-lines': 1,
+		'@stylistic/max-line-length': null,
+		'@stylistic/max-empty-lines': 1,
 		'max-nesting-depth': [
 			4,
 			{
